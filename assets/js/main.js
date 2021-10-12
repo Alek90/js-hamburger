@@ -4,10 +4,22 @@
 
 // Strumenti
 
-const element = document.getElementsByClassName(".hamburger-menu");
+const element = document.querySelector(".hamburger-menu");
 
-const button = document.getElementsByClassName(".close");
+const icon = document.querySelector(".fa-bars")
 
-element.addEventListener("click", function() {
-        element.className = `${element.classList} active`;
-    })
+const button = document.querySelector(".close");
+
+
+
+icon.addEventListener("click", function() {
+       /*  element.className = `${element.classList} active`; */
+        
+    element.classList.add("active")
+})
+
+
+button.addEventListener("click", function(){
+
+    element.classList.remove("active")
+})
